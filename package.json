@@ -1,0 +1,22 @@
+{
+  "name":"breakdown",
+  "dependencies" : {
+    "@bower_components/Wicket" : "arthur-e/Wicket#*",
+    "@bower_components/d3" : "mbostock-bower/d3-bower#^3.5.14",
+    "@bower_components/topojson" : "mbostock/topojson-bower#~1.6.14",
+    "@bower_components/jquery" : "jquery/jquery-dist#~2.1.4",
+    "@bower_components/d3-queue" : "d3/d3-queue-bower#^2.0.2",
+    "@bower_components/d3-tip" : "Caged/d3-tip#^0.6.7",
+    "@bower_components/wellknown" : "mapbox/wellknown#^0.4.1",
+    "@bower_components/fontawesome" : "FortAwesome/Font-Awesome#*",
+    "@bower_components/noUiSlider-ms" : "Mustapha-elouafi/noUiSlider#~6.0.0"
+  },
+  "engines" : {
+    "yarn" : ">= 1.0.0"
+  },
+  "scripts" : {
+    "build": "webpack --config webpack.prod.js --progress",
+    "postinstall" : "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
+  }
+}
+
